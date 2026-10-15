@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacidad · asistente-radar</title>
+<style>
+  :root { --fondo: #fbfaf7; --texto: #1d1d1b; --suave: #5f5e5a; --enlace: #1f5fa8; }
+  @media (prefers-color-scheme: dark) { :root { --fondo: #161615; --texto: #ecebe6; --suave: #a3a29c; --enlace: #7fb0ea; } }
+  body { margin: 0; background: var(--fondo); color: var(--texto);
+         font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  main { max-width: 680px; margin: 0 auto; padding: 56px 16px; }
+  h1 { font-size: 1.6rem; margin: 0 0 .25rem; }
+  h2 { font-size: 1.1rem; margin: 2rem 0 .25rem; }
+  .fecha { color: var(--suave); margin: 0 0 1.5rem; }
+  a { color: var(--enlace); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Política de privacidad de asistente-radar</h1>
+  <p class="fecha">Última actualización: 15 de octubre de 2026</p>
+
+  <h2>Quién la usa</h2>
+  <p>asistente-radar es una aplicación de uso personal. Tiene un único usuario, su propietario, que es quien
+     la ha creado y quien concede el acceso a su propia cuenta de Gmail. No se ofrece a terceros.</p>
+
+  <h2>Qué datos usa</h2>
+  <p>Con el permiso de solo lectura de Gmail, la aplicación lee los correos recibidos en las últimas 24 horas,
+     excluyendo spam y promociones. Con el permiso de envío, manda un único aviso diario a la cuenta del propio
+     usuario. No lee contactos, calendario ni ningún otro dato de Google.</p>
+  <p>Antes de cualquier análisis, la aplicación elimina el asunto y el contenido de los correos que parecen
+     nóminas, documentación fiscal o bancaria: de esos correos no sale ningún contenido hacia servicios externos.</p>
+
+  <h2>Cómo se procesan</h2>
+  <p>Del resto de correos se envían el remitente, el asunto y un extracto breve a la API de Anthropic para redactar
+     el aviso, conforme a las condiciones de uso de esa API. La aplicación se ejecuta en Google Cloud, en la región
+     de Madrid.</p>
+
+  <h2>Qué se guarda</h2>
+  <p>Se guarda un identificador y una huella de cada correo ya revisado, para no repetir avisos, y el texto de
+     los avisos generados. No se guarda una copia de los correos. Las credenciales de acceso se guardan cifradas
+     en Google Secret Manager.</p>
+
+  <h2>Con quién se comparten</h2>
+  <p>Con nadie. Los datos no se venden, no se usan para publicidad y no se transfieren a terceros, salvo el
+     procesamiento descrito con Anthropic.</p>
+  <p>El uso y la transferencia a cualquier otra aplicación de la información recibida de las API de Google se
+     ajustan a la <a href="https://developers.google.com/terms/api-services-user-data-policy">Política de datos de
+     usuario de los servicios de API de Google</a>, incluidos los requisitos de Uso Limitado.</p>
+
+  <h2>Cómo retirar el permiso</h2>
+  <p>El acceso se revoca en cualquier momento desde
+     <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Al revocarlo, la
+     aplicación deja de poder leer y enviar correo de inmediato.</p>
+
+  <h2>Contacto</h2>
+  <p>A través del perfil de GitHub del propietario:
+     <a href="https://github.com/albvilchesbilly">github.com/albvilchesbilly</a>.</p>
+</main>
+</body>
+</html>
